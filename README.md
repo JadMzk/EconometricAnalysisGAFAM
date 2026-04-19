@@ -46,7 +46,7 @@ Ce notebook propose une **analyse descriptive et économétrique** des données 
 - exploration des corrélations
 - premières analyses de type économétrique
 
-### 3. Dossier src
+### 📁 3. Dossier src
 
 Ce dossier contient toutes les fonctions utiles à la construction des portefeuilles. Ces fonctions sont réparties dans les fichiers suivants :
 
