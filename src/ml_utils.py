@@ -34,17 +34,17 @@ def fit_predict_xgb_for_asset(
     x_oos, _ = split_features_target(oos_df)
 
     params = {
-        "n_estimators": 300,
-        "max_depth": 3,
-        "learning_rate": 0.03,
-        "subsample": 0.9,
-        "colsample_bytree": 0.9,
-        "objective": "reg:squarederror",
-        "random_state": 42,
-        "n_jobs": -1,
+        "n_estimators": 300,  # nb d'arbres
+        "max_depth": 3,  # Profondeur des arbres
+        "learning_rate": 0.03,  # eta, assez lent pour éviter l'overfitting
+        "subsample": 0.9,  # Chaque arbre a 90% des données
+        "colsample_bytree": 0.9,  # Chaque arbre a 90% des features
+        "objective": "reg:squarederror",  # Fonction de perte
+        "random_state": 42,  # Pour reproductibilité
+        "n_jobs": -1,  # Utiliser tous les coeurs du CPU pour entrainement
     }
     if xgb_params:
-        params.update(xgb_params)
+        params.update(xgb_params)  # Possibilité de changer les params dans le Notebook
 
     tscv = TimeSeriesSplit(n_splits=n_splits)
     rmse_folds: list[float] = []
