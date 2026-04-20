@@ -1,7 +1,5 @@
 """Fonctions utilitaires pour le telechargement et le pretraitement des donnees."""
 
-from __future__ import annotations
-
 from typing import Iterable
 
 import numpy as np

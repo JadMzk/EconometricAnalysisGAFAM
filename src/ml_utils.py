@@ -1,7 +1,5 @@
 """Fonctions utilitaires pour l'apprentissage supervise avec XGBoost."""
 
-from __future__ import annotations
-
 import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_squared_error
